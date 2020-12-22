@@ -13,7 +13,7 @@
 			{
 				if ($value==1)
 				$sql="update hotro set trangthai=2 where idht='$idht'";
-				mysqli_query($sql);
+				mysqli_query($link,$sql);
 				unset($_SESSION['id']);
 				echo "
 							<script language='javascript'>
