@@ -34,7 +34,7 @@
                 $sql = substr($sql,0,-1);
             }
       $sql .=' )order by idsp DESC';
-      $rows=mysqli_query($sql);
+      $rows=mysqli_query($link,$sql);
 while($row=mysqli_fetch_array($rows))
 {
 ?>
@@ -62,7 +62,12 @@ while($row=mysqli_fetch_array($rows))
 	<p>Tổng cộng: <span><?php  echo number_format($tongtien,0,",",".") ?></span>VNĐ</p>
 </div>
 <div class="tieptucmuahang">
-	<p class="tieptucmuahangcon"><a href="index.php">Tiếp tục mua hàng  </a></p><p class="thanhtoancon"><a href="index.php?content=cart&action=check">Thanh toán</a></p>
+	<p class="tieptucmuahangcon"><a href="index.php">Tiếp tục mua hàng  </a></p>
+  <?php 
+    if(isset($_SESSION['username'])){ ?>
+    <p class="thanhtoancon"><a href="index.php?content=cart&action=check">Thanh toán</a></p>
+ <?php }
+?>
 </div>
 <?php
 }

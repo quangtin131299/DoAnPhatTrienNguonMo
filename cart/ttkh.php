@@ -53,7 +53,7 @@ a.submit();
 		if(isset($_SESSION['idnd'])){
 		
 		
-			$sql=mysqli_query("select * from nguoidung where idnd='".$_SESSION['idnd']."'");
+			$sql=mysqli_query($link,"select * from nguoidung where idnd='".$_SESSION['idnd']."'");
 			$row=mysqli_fetch_array($sql);
 			}
 		?>
