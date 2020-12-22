@@ -60,7 +60,7 @@
                     </td>
 					
                     <td class="active_hienthi_sp"><a href="?admin=suadm&madm=<?php echo $bien['madm']?>" > <img src="img/sua.png" title="Sửa" /></a>
-					<?php echo "<p onclick = 'checkdel({$bien['madm'] })' ><img src='img/xoa.png' title='Xóa' class='delete'></p>" ?>
+					<?php echo "<p onclick = 'checkdel({$bien['madm1'] })' ><img src='img/xoa.png' title='Xóa' class='delete'></p>" ?>
                    </td>
            
            
