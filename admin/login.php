@@ -43,7 +43,27 @@ if(isset($_POST['login']))
             echo "<p class='thongbao1'>Mật khẩu không chính xác</p>";
         else
         {
-	
+	        while($rows = mysqlo_fetch_array($row))
+            {
+              $_SESSION['username'] = $username;
+                $_SESSION['phanquyen'] = $rows['phanquyen'];
+                $_SESSION['idnd'] = $rows['idnd'];
+                if($rows['phanquyen'] == 0)
+                {
+                    
+                    echo "
+                            <script language='javascript'>
+                                alert('Đăng nhập quản trị thành công');
+                                window.open('admin.php','_self', 1);
+                            </script>
+                        ";
+                }
+                else
+                {
+                    
+                    header('location:../index.php');
+                }
+            }
 		 
         }
     }

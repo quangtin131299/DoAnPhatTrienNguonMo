@@ -24,11 +24,11 @@
     <tr class='tieude_hienthi_sp'>
 		<td width="30"><input type="checkbox" name="check"  class="checkbox" onclick="checkall('item', this)"></td>
         <td>ID</td>
-        <td>Tiêu đề</td>
-        <td>Nội dung ngắn</td>
+        <td>Tiêu đe</td>
+        <td>Nội dunh ngắn</td>
         <td>Hình ảnh</td>
         <td>Tác giả</td>
-        <td>Active</td>
+        <td>Khích hoạt</td>
     </tr>
 
     <?php
@@ -65,7 +65,7 @@
                 <td class="masp_hienthi_sp" width="30"><?php  echo $bien['matt'] ?></td>
                 <td class="stt_hienthi_sp"><?php echo $bien['tieude'] ?></td>
                 <td class="img_hienthi_sp" width="300"> <?php echo $bien['ndngan'] ?>  </td>
-				<td class="sl_hienthi_sp"><img src="../img/tintuc/<?php echo $bien['hinhanh'] ?>" width="80" height="60"/></td>
+				<td class="sl_hienthi_sp"><img src="../img/tintucs/<?php echo $bien['hinhanh'] ?>" width="80" height="60"/></td>
 				<td class="sl_hienthi_sp"><?php echo $bien['tacgia'] ?></td>
                 <td class="active_hienthi_sp">
                     <a href='?admin=suatt&matt=<?php echo $bien['matt'] ?>'><img src="img/sua.png" title="Sửa"></a>
