@@ -13,7 +13,7 @@
 			{
 				if ($value==1)
 				$sql="update hotro set trangthai=2 where idht='$idht'";
-				mysqli_query($sql);
+				mysqli_query($link,$sql);
 				unset($_SESSION['id']);
 				echo "
 							<script language='javascript'>
@@ -45,7 +45,7 @@
 						{
 							if ($value==1)
 							$sql="delete from hotro where idht='$idht'";
-							mysqli_query($link,$sql);
+							mysqli_query($sql);
 							unset($_SESSION['id']);
 							echo "
 							<script language='javascript'>
