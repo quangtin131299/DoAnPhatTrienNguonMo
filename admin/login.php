@@ -43,7 +43,24 @@ if(isset($_POST['login']))
             echo "<p class='thongbao1'>Mật khẩu không chính xác</p>";
         else
         {
-	
+            $_SESSION['username'] = $username;
+            $_SESSION['phanquyen'] = $row['phanquyen'];
+            $_SESSION['idnd'] = $row['idnd'];
+            if($rows['phanquyen'] == 0)
+            {
+                
+                echo "
+                        <script language='javascript'>
+                            alert('Đăng nhập quản trị thành công');
+                            window.open('admin.php','_self', 1);
+                        </script>
+                    ";
+            }
+            else
+            {
+                
+                header('location:../index.php');
+            }
 		 
         }
     }
