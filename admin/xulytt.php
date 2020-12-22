@@ -49,7 +49,7 @@
 							unset($_SESSION['id']);
 							echo "
 							<script language='javascript'>
-								alert('Xóa Sản phẩm đã chọn thành công');
+								alert('Xóa tin tức đã chọn thành công');
 								window.open('admin.php?admin=hienthitt','_self', 1);
 							</script>
 						";
