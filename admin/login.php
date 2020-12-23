@@ -18,6 +18,7 @@ if (isset($_SESSION['username'])) {
             <h2>Đăng nhập quản trị</h2>
         </div>
     </div>
+<<<<<<< HEAD
     <?php
     include("../include/connect.php");
 
@@ -55,6 +56,52 @@ if (isset($_SESSION['username'])) {
                     header('location:../index.php');
                 }
             }
+=======
+<?php
+include("../include/connect.php");
+
+if(isset($_POST['login']))
+{
+    $username = $_POST['user'];
+    $password = MD5($_POST['pass']);
+    $sql_check = mysqli_query($link,"select * from nguoidung where username = '$username'");
+    $dem = mysqli_num_rows($sql_check);
+    if($dem == 0)
+    {
+        echo "<p class='thongbao1'>Tài khoản không tồn tại</p>";
+    }
+    else
+    {
+        $sql_check2 = "select * from nguoidung where username = '$username' and password = '$password'";
+		$row=mysqli_query($link,$sql_check2);	
+        $dem2 = mysqli_num_rows($row);
+        if($dem2 == 0)
+            echo "<p class='thongbao1'>Mật khẩu không chính xác</p>";
+        else
+        {
+	        while($rows = mysqlo_fetch_array($row))
+            {
+              $_SESSION['username'] = $username;
+                $_SESSION['phanquyen'] = $rows['phanquyen'];
+                $_SESSION['idnd'] = $rows['idnd'];
+                if($rows['phanquyen'] == 0)
+                {
+                    
+                    echo "
+                            <script language='javascript'>
+                                alert('Đăng nhập quản trị thành công');
+                                window.open('admin.php','_self', 1);
+                            </script>
+                        ";
+                }
+                else
+                {
+                    
+                    header('location:../index.php');
+                }
+            }
+		 
+>>>>>>> quanlytintuc
         }
     }
     ?>

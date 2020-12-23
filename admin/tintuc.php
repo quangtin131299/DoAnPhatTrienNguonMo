@@ -28,7 +28,7 @@
         <td>Nội dung ngắn</td>
         <td>Hình ảnh</td>
         <td>Tác giả</td>
-        <td>Active</td>
+        <td>Kích hoạt</td>
     </tr>
 
     <?php
