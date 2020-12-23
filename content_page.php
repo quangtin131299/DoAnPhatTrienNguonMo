@@ -163,7 +163,7 @@
 					<div class="sanphamcon">
 					    <?php 
 						    $sql1="select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by daban  DESC limit 6 ";
-							$result1= mysqli_query($link,$link,$sql1);
+							$result1= mysqli_query($link,$sql1);
 						?>
 						<?php 
 						  while ($row=mysqli_fetch_array($result1))
@@ -202,7 +202,7 @@
 					<div class="sanphamcon">
 					    <?php 
 						    $sql1="select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by idsp  DESC limit 6 ";
-							$result1= mysqli_query($link,$link,$sql1);
+							$result1= mysqli_query($link,$sql1);
 						?>
 						<?php 
 						  while ($row=mysqli_fetch_array($result1))

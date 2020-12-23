@@ -3,7 +3,7 @@
 <?php
 	include ('../include/connect.php');
 	
-    $select = "select * from sanpham inner join danhmuc on sanpham.madm=danhmuc.madm";
+    $select = "select * from sanpham inner join danhmuc on sanpham.madm=danhmuc.madm limit 5";
     $query = mysqli_query($link,$select);
     $dem = mysqli_num_rows($query);
 ?>
@@ -39,21 +39,21 @@
 		// Nếu đã có sẵn số thứ tự của trang thì giữ nguyên (ở đây tôi dùng biến $page) 
 		// nếu chưa có, đặt mặc định là 1!   
 
-		if(!isset($_GET['page'])){  
-		$page = 1;  
-		} else {  
-		$page = $_GET['page'];  
-		}  
+		// if(!isset($_GET['page'])){  
+		// $page = 1;  
+		// } else {  
+		// $page = $_GET['page'];  	
+		// }  
 
-		// Chọn số kết quả trả về trong mỗi trang mặc định là 10 
-		$max_results = 10;  
+		// // Chọn số kết quả trả về trong mỗi trang mặc định là 10 
+		// $max_results = 10;  
 
-		// Tính số thứ tự giá trị trả về của đầu trang hiện tại 
-		$from = (($page * $max_results) - $max_results);  
+		// // Tính số thứ tự giá trị trả về của đầu trang hiện tại 
+		// $from = (($page * $max_results) - $max_results);  
 
 		// Chạy 1 mysqli query để hiện thị kết quả trên trang hiện tại  
 
-		$sql = mysqli_query($link,"SELECT * FROM sanpham inner join danhmuc on sanpham.madm=danhmuc.madm ORDER by idsp DESC  LIMIT $from, $max_results"); 
+		$sql = mysqli_query($link,"SELECT * FROM sanpham inner join danhmuc on sanpham.madm=danhmuc.madm ORDER by idsp Limit 5"); 
 
 
 
