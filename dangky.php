@@ -10,7 +10,7 @@
 			<td>Tên người dùng <font color="red">*</font> </td><td class="input"><input type="text" name="tennd" size="40"></td>
 		</tr>
 		<tr>
-			<td>Mật khẩu <font color="red">*</font> </td><td class="input"><input type="text" name="pass" size="40" ></td>
+			<td>Mật khẩu <font color="red">*</font> </td><td class="input"><input type="password" name="pass" size="40" ></td>
 		</tr>
 		<tr>
 			<td>Nhập lại mật khẩu <font color="red">*</font> </td><td class="input"><input type="password" name="pass1" size="40"></td>
