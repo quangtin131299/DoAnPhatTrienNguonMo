@@ -3,7 +3,7 @@
 	include ('../include/connect.php');
 	
     $select = "select * from chitiethoadon where mahd={$_GET['mahd']}";
-    $query = mysqli_query($select);
+    $query = mysqli_query($link,$select);
     $dem = mysqli_num_rows($query);
 ?>
 <div class="quanlysp">
