@@ -15,7 +15,7 @@
 			</div>
 			<div class="giasp">
 				<ul>
-					<p> <?php echo $row['tensp'] ?></p>
+					<p> <?php echo $row['idsp'] ?></p>
 					<li><span><b>Giá: <font color="red"><?php echo number_format(($row['gia']*((100-$row['khuyenmai1'])/100)),0,",",".");?></b></font></span></li>
 					<li>Tình trạng: 
 						<?php 
