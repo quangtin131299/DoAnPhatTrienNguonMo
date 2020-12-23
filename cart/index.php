@@ -30,7 +30,7 @@
     $sql="select soluong from sanpham where idsp=$stt";
     $rows=mysqli_query($sql);
     $row=mysqli_fetch_array($rows);
-    if($row['soluong']==0)
+    if($row['soluong']!=0)
     {
         echo '<script language="javascript">
     alert("Sản phẩm này tạm thời hết hàng mời bạn chọn mua sản phẩm khác hoặc quay lại đợt sau 1");

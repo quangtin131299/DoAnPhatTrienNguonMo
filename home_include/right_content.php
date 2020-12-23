@@ -54,7 +54,7 @@
                 $sql = substr($sql,0,-1);
             }
       $sql .=' )order by idsp 	';
-      $rows=mysqli_query($sql);
+      $rows=mysqli_query($link,$sql);
 while ($row=mysqli_fetch_array($rows))
 {  
 $tongtien+=$_SESSION['cart'][$row['idsp']]*$row['gia']; 
