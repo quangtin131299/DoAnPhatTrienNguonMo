@@ -35,18 +35,7 @@
 				</tr>
 				<?php 
 			}
-			else if($row['khuyenmai1']>0)
-			{
-				?><tr>
-					<td><?php echo $idsp++; ?></td>
-					<td><p style="padding-top:5px; padding-bottom:5px;"><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"><?php echo $row['tensp'] ?></a></p></td>
-					<td><?php echo $row['khuyenmai1'] ?> %</td>
-					<td><p style="padding-top:5px; padding-bottom:5px;"><?php echo $row['khuyenmai2'] ?></p></td>
-					<td><?php echo number_format(($row['gia']*((100-$row['khuyenmai1'])/100)),0,",",".");?></</td>
-				
-				</tr>
-				<?php 
-			}
+			
 				else echo "";		
 		}
 ?>
