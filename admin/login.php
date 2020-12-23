@@ -26,8 +26,7 @@ include("../include/connect.php");
 
 if(isset($_POST['login']))
 {
-    $username = $_POST['user'];
-    $password = MD5($_POST['pass']);
+    
     $sql_check = mysqli_query($link,"select * from nguoidung where username = '$username'");
     $dem = mysqli_num_rows($sql_check);
     if($dem == 0)
