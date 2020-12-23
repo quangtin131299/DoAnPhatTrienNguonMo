@@ -22,9 +22,9 @@ if(isset($_GET['timkiem']))
 	case "6":
 		$sql="select * FROM sanpham WHERE tensp like '%".$tim."%'  and (gia >= '10000000')";	
 	break;
-	default:
-	  $sql="select * FROM sanpham WHERE tensp like '%".$tim."%' ";	
-	  break;
+	// default:
+	//   $sql="select * FROM sanpham WHERE tensp like '%".$tim."%' ";	
+	//   break;
   }
   
  
