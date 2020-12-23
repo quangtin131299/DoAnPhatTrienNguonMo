@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
 	$insert="INSERT INTO nguoidung VALUES('','$tennd', '$user', '$pass','$ngaysinh','$gioitinh', '$email','$dienthoai', '$diachi','$ngay', '1')";
 		$query=mysqli_query($link,$insert);
 		if($query) {
-		redirect("index.php", "Bạn đã đăng ký thành công.", 2 );
+		//redirect("index.php", "Bạn đã đăng ký thành công.", 2 );
 			//echo "<p align = center>Đăng ký thành công!</p>";
 			//echo '<meta http-equiv="refresh" content="1;url=index.php">';
 		}
