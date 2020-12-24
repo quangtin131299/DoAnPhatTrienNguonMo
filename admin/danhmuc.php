@@ -11,7 +11,7 @@
 			 $dem = mysqli_num_rows($hienthi);
 ?>
 <div class="quanlysp">
-	<h3>QUẢN LÝ DANH MỤC</h3>
+	<h3>DANH MỤC</h3>
 <a href='?admin=themdm' >Thêm danh mục</a><br>
 	
 	<p>Có tổng <font color=red><b><?php echo $dem ?></b></font> danh mục</p>
