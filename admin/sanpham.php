@@ -91,35 +91,35 @@
 	<div id="phantrang_sp">
 	
 	<?php
-			// Tính tổng kết quả trong toàn DB:  
-			$total_results = mysqli_num_rows(mysqli_query($link,"SELECT COUNT(*) as Num FROM sanpham"));  
+			// // Tính tổng kết quả trong toàn DB:  
+			// $total_results = mysqli_num_rows(mysqli_query($link,"SELECT COUNT(*) as Num FROM sanpham"));  
 
-			// Tính tổng số trang. Làm tròn lên sử dụng ceil()  
-			$total_pages = ceil($total_results / $max_results);  
+			// // Tính tổng số trang. Làm tròn lên sử dụng ceil()  
+			// $total_pages = ceil($total_results / $max_results);  
 
 
-			// Tạo liên kết đến trang trước trang đang xem 
-			if($page > 1){  
-			$prev = ($page - 1);  
-			echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$prev\"><button class='trang'>Trang trước</button></a>&nbsp;";  
-			}  
+			// // Tạo liên kết đến trang trước trang đang xem 
+			// if($page > 1){  
+			// $prev = ($page - 1);  
+			// echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$prev\"><button class='trang'>Trang trước</button></a>&nbsp;";  
+			// }  
 
-			for($i = 1; $i <= $total_pages; $i++){  
-			if(($page) == $i){  
-				if($i>1) {
-						echo "$i&nbsp;";  } 
+			// for($i = 1; $i <= $total_pages; $i++){  
+			// if(($page) == $i){  
+			// 	if($i>1) {
+			// 			echo "$i&nbsp;";  } 
 				
-			} else {  
-			echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$i\"><button class='so'>$i</button></a>&nbsp;";  
-			}  
-			}  
+			// } else {  
+			// echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$i\"><button class='so'>$i</button></a>&nbsp;";  
+			// }  
+			// }  
 
-			// Tạo liên kết đến trang tiếp theo  
-			if($page < $total_pages){  
-			$next = ($page + 1);  
-			echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$next\"><button class='trang'>Trang sau</button></a>";  
-			}  
-			echo "</center>";  		
+			// // Tạo liên kết đến trang tiếp theo  
+			// if($page < $total_pages){  
+			// $next = ($page + 1);  
+			// echo "<a href=\"".$_SERVER['PHP_SELF']."?admin=hienthisp&page=$next\"><button class='trang'>Trang sau</button></a>";  
+			// }  
+			// echo "</center>";  		
 		
 	?>
 	</div>
