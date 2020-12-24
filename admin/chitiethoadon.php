@@ -22,8 +22,6 @@
 
     <?php
 	
-
-
 			$tong=0;					
     if($dem > 0){
         while ($bien = mysqli_fetch_array($query))
