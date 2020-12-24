@@ -1,9 +1,5 @@
-<base href="http://localhost:8080/dienthoai/" />
-<<<<<<< HEAD
+<base href="http://localhost/dienthoai/" />
 <?php 
-=======
-<?php
->>>>>>> quanlysanpham
 session_start();
 include("include/connect.php"); ?>
 
